@@ -1,0 +1,9 @@
+{
+  "smsApplicationApp": {
+    "Type": {
+      "null": "",
+      "MultimediaMessagingService": "MultimediaMessagingService",
+      "ShortMessageService": "ShortMessageService"
+    }
+  }
+}

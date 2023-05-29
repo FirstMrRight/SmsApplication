@@ -1,0 +1,35 @@
+{
+  "smsApplicationApp": {
+    "smsApplicationSplitScreen": {
+      "home": {
+        "title": "Split Screens",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Split Screen",
+        "createOrEditLabel": "Create or edit a Split Screen",
+        "notFound": "No Split Screens found"
+      },
+      "created": "A new Split Screen is created with identifier {{ param }}",
+      "updated": "A Split Screen is updated with identifier {{ param }}",
+      "deleted": "A Split Screen is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Split Screen {{ id }}?"
+      },
+      "detail": {
+        "title": "Split Screen"
+      },
+      "id": "ID",
+      "materialId": "Material Id",
+      "content": "Content",
+      "pictureUrl": "Picture Url",
+      "pictureSize": "Picture Size",
+      "updateBy": "Update By",
+      "updateName": "Update Name",
+      "createBy": "Create By",
+      "createName": "Create Name",
+      "updateDate": "Update Date",
+      "createDate": "Create Date",
+      "sequence": "Sequence",
+      "delFlag": "Del Flag"
+    }
+  }
+}

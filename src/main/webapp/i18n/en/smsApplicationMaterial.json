@@ -1,0 +1,33 @@
+{
+  "smsApplicationApp": {
+    "smsApplicationMaterial": {
+      "home": {
+        "title": "Materials",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Material",
+        "createOrEditLabel": "Create or edit a Material",
+        "notFound": "No Materials found"
+      },
+      "created": "A new Material is created with identifier {{ param }}",
+      "updated": "A Material is updated with identifier {{ param }}",
+      "deleted": "A Material is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Material {{ id }}?"
+      },
+      "detail": {
+        "title": "Material"
+      },
+      "id": "ID",
+      "materialName": "Material Name",
+      "type": "Type",
+      "updateBy": "Update By",
+      "updateName": "Update Name",
+      "createBy": "Create By",
+      "createName": "Create Name",
+      "updateDate": "Update Date",
+      "createDate": "Create Date",
+      "sort": "Sort",
+      "delFlag": "Del Flag"
+    }
+  }
+}

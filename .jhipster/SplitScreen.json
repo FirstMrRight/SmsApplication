@@ -1,0 +1,67 @@
+{
+  "applications": "*",
+  "changelogDate": "20230515085644",
+  "clientRootFolder": "SmsApplication",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "split_screen",
+  "fields": [
+    {
+      "fieldName": "materialId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "content",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "pictureUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "pictureSize",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "updateBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updateName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updateDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "sequence",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "delFlag",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "SmsApplication",
+  "name": "SplitScreen",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

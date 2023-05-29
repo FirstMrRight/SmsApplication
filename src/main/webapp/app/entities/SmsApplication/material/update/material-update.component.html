@@ -1,0 +1,142 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-material-heading"
+        data-cy="MaterialCreateUpdateHeading"
+        jhiTranslate="smsApplicationApp.smsApplicationMaterial.home.createOrEditLabel"
+      >
+        创建或编辑 Material
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="smsApplicationApp.smsApplicationMaterial.materialName" for="field_materialName"
+            >Material Name</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="materialName"
+            id="field_materialName"
+            data-cy="materialName"
+            formControlName="materialName"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="smsApplicationApp.smsApplicationMaterial.type" for="field_type">Type</label>
+          <select class="form-control" name="type" formControlName="type" id="field_type" data-cy="type">
+            <option [ngValue]="null">{{ 'smsApplicationApp.Type.null' | translate }}</option>
+            <option *ngFor="let type of typeValues" [value]="type">{{ 'smsApplicationApp.Type.' + type | translate }}</option>
+          </select>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="smsApplicationApp.smsApplicationMaterial.updateBy" for="field_updateBy">Update By</label>
+          <input type="text" class="form-control" name="updateBy" id="field_updateBy" data-cy="updateBy" formControlName="updateBy" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="smsApplicationApp.smsApplicationMaterial.updateName" for="field_updateName"
+            >Update Name</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="updateName"
+            id="field_updateName"
+            data-cy="updateName"
+            formControlName="updateName"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="smsApplicationApp.smsApplicationMaterial.createBy" for="field_createBy">Create By</label>
+          <input type="text" class="form-control" name="createBy" id="field_createBy" data-cy="createBy" formControlName="createBy" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="smsApplicationApp.smsApplicationMaterial.createName" for="field_createName"
+            >Create Name</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="createName"
+            id="field_createName"
+            data-cy="createName"
+            formControlName="createName"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="smsApplicationApp.smsApplicationMaterial.updateDate" for="field_updateDate"
+            >Update Date</label
+          >
+          <div class="d-flex">
+            <input
+              id="field_updateDate"
+              data-cy="updateDate"
+              type="datetime-local"
+              class="form-control"
+              name="updateDate"
+              formControlName="updateDate"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="smsApplicationApp.smsApplicationMaterial.createDate" for="field_createDate"
+            >Create Date</label
+          >
+          <div class="d-flex">
+            <input
+              id="field_createDate"
+              data-cy="createDate"
+              type="datetime-local"
+              class="form-control"
+              name="createDate"
+              formControlName="createDate"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="smsApplicationApp.smsApplicationMaterial.sort" for="field_sort">Sort</label>
+          <input type="number" class="form-control" name="sort" id="field_sort" data-cy="sort" formControlName="sort" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="smsApplicationApp.smsApplicationMaterial.delFlag" for="field_delFlag">Del Flag</label>
+          <input type="number" class="form-control" name="delFlag" id="field_delFlag" data-cy="delFlag" formControlName="delFlag" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">取消</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">保存</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

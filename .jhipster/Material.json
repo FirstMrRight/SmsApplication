@@ -1,0 +1,60 @@
+{
+  "applications": "*",
+  "changelogDate": "20230515085643",
+  "clientRootFolder": "SmsApplication",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "material",
+  "fields": [
+    {
+      "fieldName": "materialName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "Type",
+      "fieldValues": "MultimediaMessagingService,ShortMessageService"
+    },
+    {
+      "fieldName": "updateBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updateName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updateDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "sequence",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "delFlag",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "SmsApplication",
+  "name": "Material",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

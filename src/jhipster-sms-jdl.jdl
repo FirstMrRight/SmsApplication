@@ -1,0 +1,37 @@
+
+entity Material {
+	materialName String, //素材名称
+    type Type,//素材类型
+    updateBy String,//更新人
+    updateName String,//更新人名称
+    createBy String,//创建人
+    createName String,//创建人名称
+    updateDate Long,//更新时间
+    createDate Long,//创建时间
+    sequence Integer,//排序
+    delFlag Integer//删除0：未删除，1：已删除
+}
+
+entity SplitScreen {
+	materialId String,//素材id
+    content String,//分屏内容
+    pictureUrl String,//图片内容
+    pictureSize Integer,//图片大小
+    updateBy String,//更新人
+    updateName String,//更新人名称
+    createBy String,//创建人
+    createName String,//创建人名称
+    updateDate Long,//更新时间
+    createDate Long,//创建时间
+    sequence Integer,//排序
+    delFlag Integer//删除0：未删除，1：已删除
+}
+
+
+enum Type {
+ MultimediaMessagingService, ShortMessageService
+}
+
+service all with serviceImpl
+paginate MmsContent with pagination
+paginate MmsContentSplitScreen with pagination

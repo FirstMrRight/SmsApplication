@@ -1,0 +1,68 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="material">
+      <h2 data-cy="materialDetailsHeading"><span jhiTranslate="smsApplicationApp.smsApplicationMaterial.detail.title">Material</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ material.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="smsApplicationApp.smsApplicationMaterial.materialName">Material Name</span></dt>
+        <dd>
+          <span>{{ material.materialName }}</span>
+        </dd>
+        <dt><span jhiTranslate="smsApplicationApp.smsApplicationMaterial.type">Type</span></dt>
+        <dd>
+          <span jhiTranslate="{{ 'smsApplicationApp.Type.' + material.type }}">{{ material.type }}</span>
+        </dd>
+        <dt><span jhiTranslate="smsApplicationApp.smsApplicationMaterial.updateBy">Update By</span></dt>
+        <dd>
+          <span>{{ material.updateBy }}</span>
+        </dd>
+        <dt><span jhiTranslate="smsApplicationApp.smsApplicationMaterial.updateName">Update Name</span></dt>
+        <dd>
+          <span>{{ material.updateName }}</span>
+        </dd>
+        <dt><span jhiTranslate="smsApplicationApp.smsApplicationMaterial.createBy">Create By</span></dt>
+        <dd>
+          <span>{{ material.createBy }}</span>
+        </dd>
+        <dt><span jhiTranslate="smsApplicationApp.smsApplicationMaterial.createName">Create Name</span></dt>
+        <dd>
+          <span>{{ material.createName }}</span>
+        </dd>
+        <dt><span jhiTranslate="smsApplicationApp.smsApplicationMaterial.updateDate">Update Date</span></dt>
+        <dd>
+          <span>{{ material.updateDate | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="smsApplicationApp.smsApplicationMaterial.createDate">Create Date</span></dt>
+        <dd>
+          <span>{{ material.createDate | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="smsApplicationApp.smsApplicationMaterial.sort">Sort</span></dt>
+        <dd>
+          <span>{{ material.sort }}</span>
+        </dd>
+        <dt><span jhiTranslate="smsApplicationApp.smsApplicationMaterial.delFlag">Del Flag</span></dt>
+        <dd>
+          <span>{{ material.delFlag }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">返回</span>
+      </button>
+
+      <button type="button" [routerLink]="['/smsapplication/material', material.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">编辑</span>
+      </button>
+    </div>
+  </div>
+</div>
